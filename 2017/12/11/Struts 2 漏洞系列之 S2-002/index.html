@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;由于&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架在处理&amp;nbsp;&amp;lt;s:url&amp;gt;&amp;nbsp;和&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&amp;#x3a;  场景一：在&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;标签中，注入">
+<meta name="description" content="转自&amp;nbsp;王小龍的博客 漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;由于&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架在处理&amp;nbsp;&amp;lt;s:url&amp;gt;&amp;nbsp;和&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&amp;#x3a;  场景一：在&amp;nbsp;&amp;lt;s:a&amp;">
 <meta name="keywords" content="Struts 2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Struts 2 漏洞系列之 S2-002">
 <meta property="og:url" content="http://blog.bruce.wang/2017/12/11/Struts 2 漏洞系列之 S2-002/index.html">
 <meta property="og:site_name" content="BruceWang&#39;s Blog">
-<meta property="og:description" content="漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;由于&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架在处理&amp;nbsp;&amp;lt;s:url&amp;gt;&amp;nbsp;和&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&amp;#x3a;  场景一：在&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;标签中，注入">
+<meta property="og:description" content="转自&amp;nbsp;王小龍的博客 漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;由于&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架在处理&amp;nbsp;&amp;lt;s:url&amp;gt;&amp;nbsp;和&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&amp;#x3a;  场景一：在&amp;nbsp;&amp;lt;s:a&amp;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-12-19T14:45:42.000Z">
+<meta property="og:updated_time" content="2019-07-15T06:12:46.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Struts 2 漏洞系列之 S2-002">
-<meta name="twitter:description" content="漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;由于&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架在处理&amp;nbsp;&amp;lt;s:url&amp;gt;&amp;nbsp;和&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&amp;#x3a;  场景一：在&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;标签中，注入">
+<meta name="twitter:description" content="转自&amp;nbsp;王小龍的博客 漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;由于&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架在处理&amp;nbsp;&amp;lt;s:url&amp;gt;&amp;nbsp;和&amp;nbsp;&amp;lt;s:a&amp;gt;&amp;nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&amp;#x3a;  场景一：在&amp;nbsp;&amp;lt;s:a&amp;">
 
 
 
@@ -322,7 +322,8 @@
       
 
       
-        <h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;由于&nbsp;Struts&nbsp;2&nbsp;框架在处理&nbsp;<code>&lt;s:url&gt;</code>&nbsp;和&nbsp;<code>&lt;s:a&gt;</code>&nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&#x3a;</p>
+        <p>转自&nbsp;<a href="http://blog.bruce.wang">王小龍的博客</a></p>
+<h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;由于&nbsp;Struts&nbsp;2&nbsp;框架在处理&nbsp;<code>&lt;s:url&gt;</code>&nbsp;和&nbsp;<code>&lt;s:a&gt;</code>&nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&#x3a;</p>
 <ul>
 <li>场景一：在&nbsp;<code>&lt;s:a&gt;</code>&nbsp;标签中，注入未转义的双引号导致&nbsp;XSS&nbsp;漏洞。</li>
 <li>场景二：在&nbsp;<code>&lt;s:url&gt;</code>&nbsp;和&nbsp;<code>&lt;s:a&gt;</code>&nbsp;标签中，当参数&nbsp;includeParams&nbsp;的值不为&nbsp;“none”&nbsp;时，不会对&nbsp;<code>&lt;script&gt;</code>&nbsp;标签进行转义，导致&nbsp;XSS&nbsp;漏洞。</li>
@@ -469,7 +470,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -480,7 +481,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -491,7 +492,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
